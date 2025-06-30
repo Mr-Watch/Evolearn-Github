@@ -1,0 +1,29 @@
+{
+  "_1": {
+    "title": "Infinite Monkey Theorem",
+    "description": "Interact with a version of Infinite Monkey Theorem experiment.",
+    "lockedState": 0
+  },
+  "_2": {
+    "title": "Richard Dawkins Weasel",
+    "description": "Interact with a version of the Richard Dawkins Weasel experiment."
+  },
+  "_3": {
+    "title": "Phenotypes And Genotypes (Discrete)",
+    "description": "Time to learn about them in this exercise.",
+    "lockedState": 1
+  },
+  "_4": {
+    "title": "Phenotypes And Genotypes (Order Based)",
+    "description": "Visualize order based representations with the help of a TSP Visualization."
+  },
+  "_5": {
+    "title": "TSP Progression Visual",
+    "description": "See how the TSP graph changes through the iterations."
+  },
+  "_6": {
+    "title": "TSP Progression Visual",
+    "description": "See how the TSP graph changes through the iterations.",
+    "lockedState" : 1
+  }
+}

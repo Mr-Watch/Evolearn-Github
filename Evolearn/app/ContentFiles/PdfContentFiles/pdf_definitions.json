@@ -1,0 +1,17 @@
+{
+  "_1": {
+    "selectorName": "Introduction",
+    "fileName": "EA_Introduction.pdf",
+    "description": "This is the introductory document.\nMake sure to study it thoroughly before you go to the next one."
+  },
+  "_2": {
+    "selectorName": "How to more",
+    "fileName": "EA_Howto_more.pdf",
+    "description": "This is the follow up.\nIt goes more in depth about the subjects of selection, mutation recombination etc."
+  },
+  "_3": {
+    "selectorName": "Evolutionary Algorithm Notes",
+    "fileName": "EA_notes.pdf",
+    "description": "Here you can find the summarization of the previous two documents along with some additional information about genetic strategies."
+  }
+}

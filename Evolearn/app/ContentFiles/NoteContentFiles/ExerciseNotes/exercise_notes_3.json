@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Some of you asked for more help",
+    "description": "This is in exercise three",
+    "content": "The biggest hint is to study more!",
+    "creationDate": "Hints",
+    "lastModificationDate": "Updated hints"
+  },
+  {
+    "title": "Next weeks assignment",
+    "content": "Next week you need to do the things listed here.",
+    "creationDate": "Assignment",
+    "lastModificationDate": "Assignment"
+  }
+]

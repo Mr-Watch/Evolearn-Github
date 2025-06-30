@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="/AuxiliaryScripts/service-worker-initialization.js"
+    ></script>
+    <script src="./CdnFiles/popper.js"></script>
+    <script src="./CdnFiles/bootstrap.js"></script>
+    <link rel="stylesheet" href="./CdnFiles/bootstrap.css" />
+    <link rel="stylesheet" href="./CdnFiles/google_icons.css" />
+    <script src="./CdnFiles/suneditor.js"></script>
+    <link rel="stylesheet" href="./CdnFiles/suneditor.css" />
+    <script src="./CdnFiles/plotly.js"></script>
+    <script
+      type="module"
+      src="./SettingsManagers/theme-settings-manager.js"
+    ></script>
+
+    <!-- <script src="AuxiliaryScripts/single-instance.js"></script> -->
+    <script type="module" src="AuxiliaryScripts/view-manager.js" defer></script>
+
+    <title>Evolearn - Let's "Evolve" our learning!</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0px;
+      }
+
+      main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        height: 100%;
+      }
+
+      article {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+      }
+
+      #view_1 {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        resize: vertical;
+        order: 1;
+      }
+
+      #view_2 {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        order: 2;
+      }
+
+      .nav-link:hover {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+      }
+
+      .content_container {
+        position: relative;
+        flex: 1 1 auto;
+      }
+
+      .container_item {
+        overflow: auto;
+        position: absolute;
+        flex-grow: 1;
+        height: 100%;
+        width: 100%;
+      }
+
+      .item {
+        overflow: auto;
+        position: absolute !important;
+        background-color: var(--bs-body-bg);
+        width: 100%;
+      }
+
+      .gray_out {
+        filter: grayscale(1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <nav class="navbar bg-body-secondary p-0 justify-content-between">
+        <div class="d-flex flex-row flex-wrap">
+          <button
+            id="menu_button"
+            class="btn navbar-brand d-flex align-items-center"
+            data-bs-toggle="offcanvas"
+            href="#navbar"
+          >
+            <span class="menu_title material-icons pe-2 fs-2">menu</span>Menu
+          </button>
+
+          <button
+            id="back_button"
+            class="d-none btn navbar-brand fs-5 d-flex align-items-center m-0 p-0"
+            title="Go to previous view"
+          >
+            <span class="menu_title material-icons ms-2 me-2 fs-2"
+              >arrow_back</span
+            >
+          </button>
+          <button
+            id="view_select_button"
+            class="d-none btn navbar-brand fs-5 d-flex align-items-center m-0 p-0"
+            title="Open Select View window"
+          >
+            <span class="menu_title material-icons">more_vert</span>
+          </button>
+          <button
+            id="forward_button"
+            class="d-none btn navbar-brand fs-5 d-flex align-items-center m-0 p-0"
+            title="Go to next view"
+          >
+            <span class="menu_title material-icons ms-2 me-2 fs-2"
+              >arrow_forward</span
+            >
+          </button>
+          <button
+            id="close_button"
+            class="d-none btn navbar-brand fs-5 d-flex align-items-center m-0 p-0"
+            title="Close current view"
+          >
+            <span class="menu_title material-icons ms-2 me-2 fs-2"
+              >disabled_by_default</span
+            >
+          </button>
+        </div>
+        <div class="pe-3" role="toolbar">
+          <button
+            id="split_screen"
+            type="button"
+            class="btn btn-primary pb-0"
+            title="Toggle Split-View"
+          >
+            <span class="material-icons"> splitscreen </span>
+          </button>
+          <div
+            id="split_view_controls"
+            class="btn-group mx-2 d-none"
+            role="group"
+          >
+            <button
+              type="button"
+              class="btn btn-primary pb-0"
+              title="Swap views vertically|horizontally"
+            >
+              <span class="material-icons"> swap_vert </span>
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary pb-0"
+              title="Reset split proportions"
+            >
+              <span class="material-icons"> refresh </span>
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary pb-0"
+              title="Hide split view window and controls"
+            >
+              <span class="material-icons"> visibility_off </span>
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary pb-0"
+              title="Close split view window"
+            >
+              <span class="material-icons"> close </span>
+            </button>
+          </div>
+          <button
+            id="help_button"
+            type="button"
+            class="btn btn-primary pb-0"
+            title="Get help for the current view"
+          >
+            <span class="material-icons"> help </span>
+          </button>
+        </div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="navbar">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title m-1">
+              Evolearn - Let's "Evolve"<br />
+              Our learning!
+            </h5>
+            <button
+              type="button"
+              class="btn-close m-2"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="d-flex flex-column">
+              <hr />
+              <ul class="nav nav-pills flex-column mb-auto">
+                <li>
+                  <button
+                    class="nav-link fs-5 d-flex mb-3 w-100"
+                    data-bs-dismiss="offcanvas"
+                    onclick="changeView('pdfView')"
+                  >
+                    <span class="material-icons pe-2 fs-2">auto_stories</span>
+                    Study Material
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="nav-link fs-5 d-flex mb-3 w-100"
+                    data-bs-dismiss="offcanvas"
+                    onclick="changeView('exerciseView')"
+                  >
+                    <span class="material-icons pe-2 fs-2">code</span>
+                    Exercises
+                  </button>
+                </li>
+                <!-- <li>
+                  <button
+                    class="nav-link fs-5 d-flex mb-3 w-100"
+                    data-bs-dismiss="offcanvas"
+                    onclick="changeView('playgroundView')"
+                  >
+                    <span class="material-icons pe-2 fs-2">gamepad</span>
+                    PlayGround
+                  </button>
+                </li> -->
+                <li>
+                  <button
+                    class="nav-link fs-5 d-flex mb-3 w-100"
+                    data-bs-dismiss="offcanvas"
+                    onclick="changeView('quizView')"
+                  >
+                    <span class="material-icons pe-2 fs-2">description</span>
+                    Quizzes
+                  </button>
+                </li>
+                <!-- <li>
+                  <button
+                    class="nav-link fs-5 d-flex mb-3 w-100"
+                    data-bs-dismiss="offcanvas"
+                    onclick="changeView('askTeacher')"
+                  >
+                    <span class="material-icons pe-2 fs-2"
+                      >contact_support</span
+                    >
+                    Ask The Teacher
+                  </button>
+                </li> -->
+                <li>
+                  <button
+                    class="nav-link fs-5 d-flex mb-3 w-100 align-items-center"
+                    data-bs-dismiss="offcanvas"
+                    onclick="changeView('settings')"
+                  >
+                    <span class="material-icons pe-2 fs-2">settings</span>
+                    Settings
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="nav-link fs-5 d-flex mb-3 w-100 position-relative justify-content-between align-items-center"
+                    data-bs-dismiss="offcanvas"
+                    onclick="changeView('notifications')"
+                  >
+                    <span>
+                      <span class="material-icons pe-2 fs-2 align-items-center"
+                        >notifications_active</span
+                      >
+                      <span>Notifications</span>
+                    </span>
+                    <span
+                      class="notification_badge badge rounded-pill bg-danger"
+                    ></span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="nav-link fs-5 d-flex mb-3 w-100"
+                    data-bs-dismiss="offcanvas"
+                    onclick="changeView('about')"
+                  >
+                    <span class="material-icons pe-2 fs-2">info</span>
+                    About
+                  </button>
+                </li>
+              </ul>
+              <hr />
+            </div>
+          </div>
+          <h6 class="ms-2">Copyleft 2024 🄯</h6>
+        </div>
+      </nav>
+
+      <article id="view_container" class="content_container">
+        <div id="view_1" class="container_item">
+          <div class="waiting_for_view item my-2 w-75">
+            <div
+              class="position-relative p-3 text-center text-muted bg-body border border-dashed rounded-5"
+            >
+              <h1 class="text-body-emphasis">
+                Waiting for you to select an activity
+              </h1>
+              <p class="col-lg-6 mx-auto mb-4">
+                You can click on the menu <br />
+                and chose an activity to display.
+              </p>
+              <button
+                class="btn btn-primary px-5 mb-3"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#navbar"
+              >
+                Open menu
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="view_2" class="container_item d-none">
+          <div class="waiting_for_view item my-2 w-75">
+            <div
+              class="position-relative p-3 text-center text-muted bg-body border border-dashed rounded-5"
+            >
+              <h1 class="text-body-emphasis">
+                Waiting for you to select an activity
+              </h1>
+              <p class="col-lg-6 mx-auto mb-4">
+                You can click on the menu <br />
+                and chose an activity to display.
+              </p>
+              <button
+                class="btn btn-primary px-5 mb-3"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#navbar"
+              >
+                Open menu
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <img src="./Images/sliders-svgrepo-com.svg" alt="" class="d-none" />
+    <img src="./Images/quiz-svgrepo-com.svg" alt="" class="d-none" />
+    <img src="./Images/lock-svgrepo-com.svg" alt="" class="d-none" />
+    <img src="./Images/PDF_icon.svg" alt="" class="d-none" />
+    <img src="./Images/favicon.svg" alt="logo" class="d-none" />
+
+    <script defer>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        let parameters = new URL(location.toString()).searchParams;
+        if (parameters.size !== 0) {
+          if (parameters.size === 1 && parameters.get("view") !== null) {
+            changeView(parameters.get("view"));
+          } else if (
+            parameters.size === 2 &&
+            parameters.get("view") !== null &&
+            parameters.get("item") !== null
+          ) {
+            changeView(parameters.get("view"), parameters.get("item"));
+          } else if (
+            parameters.size === 3 &&
+            parameters.get("view") !== null &&
+            parameters.get("item") !== null &&
+            parameters.get("page") !== null
+          ) {
+            changeView(
+              parameters.get("view"),
+              parameters.get("item"),
+              "",
+              parseInt(parameters.get("page")),
+              1
+            );
+          }
+        }
+      });
+    </script>
+    <script
+      defer
+      type="module"
+      src="AuxiliaryScripts/socket-definitions.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="./NotificationManager/notification-manager.js"
+    ></script>
+  </body>
+</html>

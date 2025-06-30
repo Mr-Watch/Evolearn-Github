@@ -1,0 +1,27 @@
+{
+  "name": "evolearn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"bin" : "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+    "pkg": {
+        "assets": [
+            "app/**/*"
+        ],
+        "output": "dist",
+"targets": [ "node18-win-x64" ]
+    },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "express-minify": "^1.0.0",
+    "pkg": "^5.8.1",
+    "socket.io": "^4.7.2"
+  }
+}

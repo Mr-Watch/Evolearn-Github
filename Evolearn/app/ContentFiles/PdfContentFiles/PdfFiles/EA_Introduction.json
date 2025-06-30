@@ -1,0 +1,159 @@
+{
+  "1": [
+    {
+      "text": "Email:",
+      "occurrences": 1,
+      "span_links": {
+        "url": ["mailto:adamidis@it.teithe.gr"]
+      }
+    },
+    {
+      "text": "URL:",
+      "occurrences": 1,
+      "span_links": {
+        "url": ["http://aetos.it.teithe.gr/~adamidis"]
+      }
+    },
+    {
+      "text": "Douglas Adams",
+      "occurrences": 1,
+      "span_links": {
+        "url": [
+          "https://www.goodreads.com/quotes/811-for-instance-on-the-planet-earth-man-had-always-assumed"
+        ]
+      }
+    },
+    {
+      "text": "Darwin",
+      "occurrences": 1,
+      "span_links": {
+        "url": ["https://academic.oup.com/brain/article/132/12/3481/492371"]
+      }
+    }
+  ],
+  "2": [
+    {
+      "text": "Email:",
+      "occurrences": 1,
+      "span_links": {
+        "url": ["mailto:adamidis@it.teithe.gr"]
+      }
+    },
+    {
+      "text": "URL:",
+      "occurrences": 1,
+      "span_links": {
+        "url": ["http://aetos.it.teithe.gr/~adamidis"]
+      }
+    },
+    {
+      "text": "Evolution Strategies",
+      "occurrences": 2,
+      "span_links": {
+        "url": ["http://scholarpedia.org/article/Evolution_strategies"]
+      }
+    },
+    {
+      "text": "J. Koza 1989",
+      "occurrences": 1,
+      "span_links": {
+        "url": [
+          "https://doc.lagout.org/science/Artificial%20Intelligence/Evolutionary%20computation/Genetic%20programming%20Complex%20adaptive%20systems%20-%20Koza%20J.R..pdf"
+        ]
+      }
+    }
+  ],
+  "3": [
+    {
+      "text": "Numerical optimization",
+      "occurrences": 1,
+      "span_links": {
+        "url": [
+          "https://umsl.edu/cmpsci/about/People/Faculty/CezaryJanikow/folder%20two/Numerical.pdf"
+        ]
+      }
+    },
+    {
+      "text": "Image processing and pattern",
+      "occurrences": 1,
+      "span_links": {
+        "url": [
+          "https://books.google.gr/books?hl=en&lr=&id=DzDUO5nhiOQC&oi=fnd&pg=PR11&dq=Image+processing+and+pattern%0D%0Arecognition+with+genetic+algorithms&ots=6OMXbzVbeK&sig=kT75GlLT49gzN2lIlNqZQjo_wVw&redir_esc=y#v=onepage&q&f=false"
+        ]
+      }
+    },
+    {
+      "text": "Evolution Programs",
+      "occurrences": 1,
+      "span_links": {
+        "wikipedia": ["Evolutionary programming"]
+      }
+    }
+  ],
+  "4": [
+    {
+      "text": "Travelling Salesperson",
+      "occurrences": 1,
+      "span_links": {
+        "wikipedia": ["Travelling salesman problem"],
+        "exercise": [5]
+      }
+    },
+    {
+      "text": "Numerical optimization",
+      "occurrences": 1,
+      "span_links": {
+        "url": [
+          "https://umsl.edu/cmpsci/about/People/Faculty/CezaryJanikow/folder%20two/Numerical.pdf"
+        ]
+      }
+    },
+    {
+      "text": "Image processing and pattern",
+      "occurrences": 1,
+      "span_links": {
+        "url": [
+          "https://books.google.gr/books?hl=en&lr=&id=DzDUO5nhiOQC&oi=fnd&pg=PR11&dq=Image+processing+and+pattern%0D%0Arecognition+with+genetic+algorithms&ots=6OMXbzVbeK&sig=kT75GlLT49gzN2lIlNqZQjo_wVw&redir_esc=y#v=onepage&q&f=false"
+        ]
+      }
+    },
+    {
+      "text": "Combinatorial optimization",
+      "occurrences": 1,
+      "span_links": {
+        "wikipedia": ["Combinatorial optimization"],
+        "url": [
+          "https://doiserbia.nb.rs/img/doi/0354-0243/2014/0354-02431300041E.pdf"
+        ]
+      }
+    }
+  ],
+  "5": [
+    {
+      "text": "Pipe network strengthening",
+      "occurrences": 1,
+      "span_links": {
+        "url": [
+          "https://www.angelfire.com/pro2/iwtc/CV%20-%20Dr.%20Berge%20Djebedjian/IWTC2005-15-4.pdf"
+        ]
+      }
+    },
+    {
+      "text": "Excess pressure",
+      "occurrences": 1,
+      "span_links": {
+        "url": [
+          "https://pdf.sciencedirectassets.com/278653/1-s2.0-S1877705817X00179/1-s2.0-S1877705817314078/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGEaCXVzLWVhc3QtMSJIMEYCIQDij9EL0sAyYpmpbetiG6pUNHvFh%2BrJvSOxZAjX9D5pIAIhAM9DLMAQih5fggIRLkK3x9ZVM0lkHdegCGCUvnAMJ1SoKrwFCNr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQBRoMMDU5MDAzNTQ2ODY1Igy5HvcFj20HWPI2qGkqkAXPI4RXvBhiNBMZcYBZvtDrCAJRQVdbuKG6pfaEkLewKcj2kdIjt0Ue9skeKAZQWFBl4ZroLTjJtGZkPOsWDYOkPKIsu%2F45K2fMCMTRayjnLhCQe9JPC58fjtjIKLsG6Dr5%2Fwd4AHvZLoj1vdu%2FU1na4ODbn6IOWHMA4BzAZxVLYL5DwIbpkzYs6JeIBkISEdo%2BgQ%2FXcXJ%2F7PPyE2C5nRhM21IlpahYtPrarbJvI8pjB6L3F0srtZCCL8XC5hNjcq6%2FyYqm7C3YTSh0omyyCm%2FXNGU2TfYxbbDrwJiJY7S8q1ocBr6dYc5BOzTkGzD4O1lYclkGuHxRDS9BwjLvHmN1PT%2BHEDEn%2BLdcdq4K5kiVStiI9lnYzRqiiJegWcNkTwHy%2BLY%2FXY17RBm54KByeikH920hRr356Ct%2B%2BpURCyzhOB6GRnU1SxLB3zTzEGVR4mfoWvfkFN4UAVqEbc3Za3K9Y1zxzD3je2nZ3i%2FkoH%2B0yt8r9JzfPKkRuGnvzE%2FvWXa4zvz4Q747AXvZCGx9GrVKmrFJwMb0fisgF1lX8ucXng3PrW6epu6qoX2jZeDntwHVKWrEK292u%2BKgYCNNsXTmbSrZPnRVa9DrbCXdBEuzj7t4ro6vXE6OJQMj16XMXKRcIzK9X8zvurB0n0z4SlCQb55cKK7mGUXypQ2B4AqLmTK1uVJNONCNREALydZfYxt2iYlrDl7gQwFdrUb9zaH%2FisNmTe1UuGHguroBUS2X8a6Tb4koTWZdtQqV37G7MRIRUKBkueHGFz3KT8sm%2F4RMrvv96SUVDnMucpdQl1rTxcG8FZlzq2PPbVjBaitdaApD5Sh2TCloG9hIX8kxftehik6p%2BGtXDrCwpkeargsHGDD1h4esBjqwAQSt%2FgpTMXIk3nNsrskJe%2F3%2BevVDcqz4CRuFTYEvX8yzRzxpEvjpqm6OEKKsMvmOPNR9a8C%2FQr2dHvvTWn2tlvNO0Vud1LN1dpYqdTEx4x6w37Ch40vldL%2BV8jHuMo80vGHVDvBPZq50OllAtGx0Rcy2PtMBOHJnlS6PFHoOxqj%2BUagefUNzLPL5gQMKIPswOic1IRbMjeqeMW3i7NYScP73vyq5Kwzal9Vvqfmz9CHg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20231219T181011Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY2MROLN7W%2F20231219%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=221d94f5ec3961c0dc715a11ff25e84b3f5f97334b952921bf1256a4da625960&hash=2adb01b12d527e3afa17793f2690b5411c964bb60ee21952f77abd4a133c7caf&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1877705817314078&tid=spdf-f0e10b93-bdd7-440d-be44-12ee691c7216&sid=b912be0e722eb54e974896363a52ed65f24agxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=1d175f5d5f515e5f06570c&rr=838199d2bcd6ee7f&cc=gr"
+        ]
+      }
+    },
+    {
+      "text": "Travelling Salesperson",
+      "occurrences": "all",
+      "span_links": {
+        "wikipedia": ["Travelling salesman problem"],
+        "exercise": [5]
+      }
+    }
+  ]
+}

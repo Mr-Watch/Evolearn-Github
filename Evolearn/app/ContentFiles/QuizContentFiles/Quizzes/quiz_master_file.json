@@ -1,0 +1,74 @@
+{
+  "evolutionary_circle": {
+    "q1": {
+      "title": {
+        "el": "Ποίο είναι το πρώτο βήμα στον εξελικτικό κύκλο",
+        "en": "What is the first step in the evolutionary circle"
+      },
+      "hint": {
+        "el": "Ενα γκρουπ ανθρώπων είναι...",
+        "en": "A group of people is a..."
+      },
+      "options": {
+        "el": ["Επιλογή", "Μετάλλαξη", "Ανασυνδυασμός"],
+        "en": ["Selection", "Mutation", "Recombination"]
+      },
+      "type": "multiple_choice",
+      "answer": [0]
+    }
+  },
+  "initialization": {
+    "q1": {
+      "title": {
+        "el": "Πιο βήμα εμφανίζεται μετά τον ανασυνδυασμό ?",
+        "en": "What step occurs after recombination?"
+      },
+      "hint": {
+        "el": "Τι συμβαίνει κάποιες φορές στα γονίδια...",
+        "en": "What happens to genes some times..."
+      },
+      "example": {
+        "el": "Επιλογή",
+        "en": "Selection"
+      },
+      "explanation_reference": [1, "The Evolutionary Cycle", 3, 1],
+      "type": "input",
+      "answer": {
+        "el": "Μετάλλαξη",
+        "en": "Mutation"
+      }
+    }
+  },
+
+  "selection": {
+    "q1": {
+      "title": {
+        "el": "Η επιλογή εμφανίζεται πριν την αντικατάσταση ?",
+        "en": "Does selection appear before replacement ?"
+      },
+      "hint": {
+        "el": "Σκέψου την σειρά που πρέπει να λάβουν μέρος τα βήματα ενός πληθυσμού",
+        "en": "Think about the order that a population's steps should take"
+      },
+      "explanation": {
+        "el": "Ναι γιατί πρέπει πρώτα να λάβει μέρος η επιλογή των αρχικών μελών του πληθυσμού πριν μπορέσει να γίνει η αντικατάσταση τους με τους νέους",
+        "en": "Yes, because the selection of the original members of the population must first take place before they can be replaced with the new ones"
+      },
+      "explanation_reference": [1, "The Evolutionary Cycle", 3, 1],
+      "type": "true_false",
+      "answer": 1
+    },
+    "q2": {
+      "title": {
+        "el": "Ποια από αυτά τα βήματα είναι μέρος του εξελικτικού κύκλου ?",
+        "en": "Which of these steps are part of the evolutionary cycle?"
+      },
+      "options": {
+        "el": ["Επιλογή", "Ανασυνδυασμός", "Ανταλλαγή"],
+        "en": ["Selection", "Recombination", "Exchange"]
+      },
+      "type": "check_box_select",
+      "answer": [0, 1]
+    }
+  }
+}

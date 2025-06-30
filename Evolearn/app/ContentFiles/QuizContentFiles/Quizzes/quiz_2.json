@@ -1,0 +1,21 @@
+{
+  "info": {
+    "title": "Quiz 1",
+    "description": "This quiz focuses on the evolutionary circle",
+    "difficulty": "Normal"
+  },
+  "configuration": {
+    "show": "split",
+    "split_number": 2,
+    "passing_score": 70,
+    "quiz_unlock": 80,
+    "negative_scoring": [0.6, 1],
+    "show_hints": false,
+    "allow_answer_checking": false,
+    "allow_question_reset": true,
+    "random_order": false,
+    "timer": 5,
+    "notify_user": false,
+    "questions": 1
+  }
+}

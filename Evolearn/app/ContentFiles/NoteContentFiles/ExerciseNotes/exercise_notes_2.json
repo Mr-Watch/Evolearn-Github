@@ -1,0 +1,9 @@
+[
+  {
+    "title": "A note from the teacher",
+    "description": "This is in exercise one",
+    "content": "<h1><u><strong>This is the title​</strong></u><br></h1><p>This is the first sentence.<br></p><p>This is a math expression :&nbsp; x<sup>2</sup>+ 1 = y<br></p><p></p><table class='se-table-size-100'><tbody><tr><td><div>1<br></div></td><td><div>a<br></div></td><td><div>b<br></div></td></tr><tr><td><div>1<br></div></td><td><div>a<br></div></td><td><div>b<br></div></td></tr></tbody></table><h1 style='text-align: center;'><span style='background-color: rgb(0, 85, 255);'><span style='color: rgb(255, 0, 0);'><del>This title is centered​</del></span></span><br></h1><hr class='__se__solid on'><p>This is a list:<br></p><ol><li>Item 1<br></li><li>Item 2<br></li><li>Item 3​<br></li></ol>",
+    "creationDate": "Attention",
+    "lastModificationDate": "Added more answers"
+  }
+]

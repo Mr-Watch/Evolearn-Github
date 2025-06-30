@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Notifications</title>
+    <script src="./CdnFiles/bootstrap.js"></script>
+    <link rel="stylesheet" href="./CdnFiles/bootstrap.css" />
+  </head>
+  <body>
+    <div class="accordion m-3" id="userProperties">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+          >
+            Teacher Credentials
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#userProperties"
+        >
+          <div class="accordion-body">
+            <div class="d-flex flex-column m-2">
+              <div class="input-group mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  class="form-control"
+                  placeholder="User Name"
+                  name="user_name"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  name="password_field"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="d-flex flex-column justify-content-center align-items-center w-50 m-2"
+    >
+      <input
+        class="m-2 form-control"
+        type="text"
+        name="title"
+        id=""
+        placeholder="Notification Title"
+      />
+      <textarea
+        class="m-2 form-control"
+        name="send_notification"
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Notification Body"
+      ></textarea>
+      <button class="m-2 btn btn-primary send_notification">
+        Send Notification
+      </button>
+      <!-- <button onclick="logOut()">Log Out</button> -->
+    </div>
+    <script>
+      let notificationTitle = document.querySelector('[name="title"]');
+      let notificationTextArea = document.querySelector(
+        '[name="send_notification"]'
+      );
+      let sendNotificationButton = document.querySelector(".send_notification");
+      let userName = document.querySelector('[name="user_name"]');
+      let password = document.querySelector('[name="password_field"]');
+
+      async function sendNotification() {
+        let userName = document.querySelector('[name="user_name"]');
+        let password = document.querySelector('[name="password_field"]');
+
+        if (
+          notificationTextArea.value !== "" &&
+          userName.value !== "" &&
+          password.value !== ""
+        ) {
+          password = await digestMessage(password.value);
+          let request = fetch("/notify", {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              userName: userName.value,
+              password: password,
+              title: notificationTitle.value,
+              message: notificationTextArea.value,
+              hash: hashCode(new Date().toLocaleTimeString()),
+              dateStamp: new Date().toLocaleDateString(),
+              timeStamp: new Date().toLocaleTimeString(),
+            }),
+          });
+        } else {
+          alert("Wrong user Name or password or empty message body");
+        }
+      }
+
+      async function digestMessage(message) {
+        const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
+        const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // hash the message
+        const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
+        const hashHex = hashArray
+          .map((b) => b.toString(16).padStart(2, "0"))
+          .join(""); // convert bytes to hex string
+        return hashHex;
+      }
+
+      function getRandomInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function hashCode(s) {
+        let h;
+        for (let i = 0; i < s.length; i++)
+          h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+        h += getRandomInteger(1, 1000);
+        return h;
+      }
+
+      sendNotificationButton.addEventListener("click", sendNotification);
+    </script>
+    <script>
+      window.history.replaceState({}, "", "teacher");
+    </script>
+    <script src="./CdnFiles/socket.io.js"></script>
+    <!-- <script>
+      let socket;
+      const URL = "http://localhost:3500";
+
+      socket = io.connect(URL, { autoConnect: false, reconnection: false });
+
+      socket.auth = { userName: "adamidis", userType: "teacher" };
+      socket.connect();
+
+      socket.on("connect_error", (err) => {
+        if (err.notification === "invalid user") {
+          console.error("Invalid userName");
+        }
+      });
+
+      socket.on("send data", (data) => {
+        document.body.appendChild(stringToNode(`<h2>${data.notification}</h2>`));
+      });
+
+      socket.on("connect_successful", (data) => {
+        console.log("Teacher logged in");
+      });
+
+      // socket.onAny((event, ...args) => {
+      //   console.log(event, args);
+      // });
+
+      socket.on("notification_to_everyone", (msg) => {
+        console.log(msg);
+      });
+
+      socket.on("users", (data) => {
+        document.body.appendChild(stringToNode(`<h2>${data.notification}</h2>`));
+        console.log(data);
+      });
+
+      function stringToNode(nodeString) {
+        let doc = new DOMParser().parseFromString(nodeString, "text/html");
+        return doc.body.firstChild;
+      }
+
+      function logOut() {
+        socket.emit("teacher_logging_out");
+        console.log("logged out");
+      }
+
+      // window.addEventListener("beforeunload", () => {
+
+      // });
+    </script> -->
+  </body>
+</html>

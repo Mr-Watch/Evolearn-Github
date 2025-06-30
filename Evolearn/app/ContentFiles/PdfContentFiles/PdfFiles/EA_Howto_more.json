@@ -1,0 +1,14 @@
+{
+  "1": [
+    {
+      "text": "Infinite Monkey Theorem",
+      "occurrences": "all",
+      "span_links": {
+        "wikipedia": ["Infinite Monkey Theorem"],
+        "url": ["https://www.apstatsmonkey.com/StatsMonkey/TPS3e_files/TypingMonkeys.pdf"],
+        "exercise": [1],
+        "quiz": [1]
+      }
+    }
+  ]
+}

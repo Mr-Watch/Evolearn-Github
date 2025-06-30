@@ -1,0 +1,27 @@
+{
+  "info": {
+    "title": "Quiz 1",
+    "description": "Mix of selection, initialization, evolutionary circle",
+    "difficulty": "Normal"
+  },
+  "configuration": {
+    "show": "split",
+    "split_number": 2,
+    "passing_score": 30,
+    "quiz_unlock": 80,
+    "negative_scoring": [0.5, 1],
+    "show_hints": false,
+    "allow_answer_checking": false,
+    "allow_question_reset": false,
+    "random_order": false,
+    "timer": 2,
+    "notify_user": true,
+    "questions": [
+      "evolutionary_circle",
+      {
+        "selection": ["q2", "q1"]
+      },
+      "initialization"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_1": {
+    "title": "Randomly generated Quiz",
+    "description": "It selects 10 random questions for you to solve",
+    "difficulty": "Easy",
+    "lockedState": 0
+  },
+  "_2": {
+    "title": "Quiz 1",
+    "description": "This quiz focuses on the evolutionary circle",
+    "difficulty": "Normal",
+    "lockedState" : 0
+  },"_3": {
+    "title": "Quiz 2",
+    "description": "This quiz tests your knowledge of termination criteria",
+    "difficulty": "Easy",
+    "lockedState" : 2
+  },"_4": {
+    "title": "Quiz 3",
+    "description": "This quiz is all about the use of the fitness function",
+    "difficulty": "Hard"
+  }
+}

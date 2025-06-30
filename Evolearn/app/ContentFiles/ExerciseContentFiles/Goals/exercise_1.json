@@ -1,0 +1,30 @@
+{
+  "_1": {
+    "title": "Sticking to the script",
+    "description": "Use the banana as the exercise instructs"
+  },
+  "_2": {
+    "title": "All in!",
+    "description": "Use every single character set all at once"
+  },
+  "_3": {
+    "title": "Rebel",
+    "description": "Try to run the exercise with an impossible character set"
+  },
+  "_4": {
+    "title": "100s across the board!",
+    "description": "Dial everything to 100..."
+  },
+  "_5": {
+    "title": "Rapid fire",
+    "description": "Get a successful text match while going as fast as possible"
+  },
+  "_6": {
+    "title": "Find the Cat",
+    "description": "Get a successful match with the word cat in under 2000 iterations"
+  },
+  "_7": {
+    "title": "The log of madness",
+    "description": "Select 1000 string records to keep and get 5000 total logs with the word 'word'"
+  }
+}

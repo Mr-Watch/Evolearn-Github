@@ -1,0 +1,53 @@
+{
+  "pdf": {
+    "fileName": "pdf.htm",
+    "title": "Pdf Viewer"
+  },
+  "exercise": {
+    "title": "Exercise"
+  },
+  "quiz": {
+    "fileName": "quiz.htm",
+    "title": "Quiz"
+  },
+  "quizReview": {
+    "fileName": "quiz_review.htm",
+    "title": "Quiz Review"
+  },
+  "pdfView": {
+    "fileName": "pdf_view.htm",
+    "title": "Study Material"
+  },
+  "exerciseView": {
+    "fileName": "exercise_view.htm",
+    "title": "Exercises"
+  },
+  "playgroundView": {
+    "fileName": "playground_view.htm",
+    "title": "Playground"
+  },
+  "quizView": {
+    "fileName": "quiz_view.htm",
+    "title": "Quizzes"
+  },
+  "askTeacher": {
+    "fileName": "ask_teacher.htm",
+    "title": "Ask The Teacher"
+  },
+  "settings": {
+    "fileName": "settings.htm",
+    "title": "Settings"
+  },
+  "notifications": {
+    "fileName": "notifications.htm",
+    "title": "Notifications"
+  },
+  "noteRecovery": {
+    "fileName": "note-recovery.htm",
+    "title": "Note Recovery"
+  },
+  "about": {
+    "fileName": "about.htm",
+    "title": "About"
+  }
+}
